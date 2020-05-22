@@ -4,7 +4,6 @@ Patternfly Seed is an open source build scaffolding utility for web apps. The pr
 
 Out of the box you'll get an app layout with chrome (header/sidebar), routing, build pipeline, test suite, and some code quality tools. Basically, all the essentials.
 
-<img width="1058" alt="Out of box dashboard view of patternfly seed" src="https://user-images.githubusercontent.com/5942899/62715686-fa954980-b9ce-11e9-9fc2-217b7a4d1d81.png">
 
 ## Quick-start
 ```bash
@@ -100,3 +99,5 @@ ENV_2=http://2.myendpoint.com
 ```
 
 With that in place, you can use the values in your code like `console.log(process.env.ENV_1);`
+
+Testing
