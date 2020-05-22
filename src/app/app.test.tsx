@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { App } from '@app/index';
 import { Dashboard } from '@app/Dashboard/Dashboard';
-import { Openshift } from '@app/Openshift/Openshift';
+//import { Openshift } from '@app/Openshift/Openshift';
 import { mount, shallow } from 'enzyme';
 import { Button } from '@patternfly/react-core';
-import { ChartPie, ChartThemeColor } from '@patternfly/react-charts';
+//import { ChartPie, ChartThemeColor } from '@patternfly/react-charts';
 
 describe('App tests', () => {
   test('should render default App component', () => {
@@ -36,19 +36,19 @@ describe('App tests', () => {
    
   });
 
-  it('should render the openshift page', () => {
-    const view = shallow(<Openshift />);
-    expect(view).toMatchSnapshot();
+  // it('should render the openshift page', () => {
+  //   const view = shallow(<Openshift />);
+  //   expect(view).toMatchSnapshot();
    
-  });
+  // });
 
-  it('should render the pie chart on openshift page', () => {
-    const wrapper = mount(<Openshift />);
+  // it('should render the pie chart on openshift page', () => {
+  //   const wrapper = mount(<Openshift />);
     
-    const pie_chart = wrapper.find(ChartPie);
-    expect(pie_chart.exists()).toBe(true);
+  //   const pie_chart = wrapper.find(ChartPie);
+  //   expect(pie_chart.exists()).toBe(true);
    
-  });
+  // });
 
   
 

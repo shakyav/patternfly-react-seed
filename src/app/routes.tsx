@@ -9,6 +9,10 @@ import { Openshift } from '@app/Openshift/Openshift';
 import { useDocumentTitle } from '@app/utils/useDocumentTitle';
 import { LastLocationProvider, useLastLocation } from 'react-router-last-location';
 
+
+
+
+
 let routeFocusTimer: number;
 
 const getSupportModuleAsync = () => () => import(/* webpackChunkName: 'support' */ '@app/Support/Support');
@@ -46,6 +50,7 @@ export interface IAppRoute {
   exact?: boolean;
   path: string;
   title: string;
+ 
   isAsync?: boolean;
 }
 
@@ -55,7 +60,8 @@ const routes: IAppRoute[] = [
     exact: true,
     label: 'Dashboard',
     path: '/',
-    title: 'PatternFly Seed | Main Dashboard'
+    title: 'PatternFly Seed | Main Dashboard',
+    
   },
   {
     component: Openshift,
@@ -63,7 +69,8 @@ const routes: IAppRoute[] = [
     isAsync: true,
     label: 'Openshift',
     path: '/openshift',
-    title: 'PatternFly Seed | Openshift Page'
+    title: 'PatternFly Seed | Openshift Page',
+    
   },
   {
     component: Support,
@@ -71,7 +78,9 @@ const routes: IAppRoute[] = [
     isAsync: true,
     label: 'Support',
     path: '/support',
-    title: 'PatternFly Seed | Support Page'
+    title: 'PatternFly Seed | Support Page',
+    
+
   }
 ];
 
@@ -117,6 +126,7 @@ const AppRoutes = () => (
           key={idx}
           title={title}
           isAsync={isAsync}
+          
         />
       ))}
       <PageNotFound title="404 Page Not Found" />

@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { PageSection, Title }  from '@patternfly/react-core';
+import { PageSection, Title } from '@patternfly/react-core';
+import { SimpleTable } from '@app/myTable/myTable';
+import { Fetchdata } from '@app/fetchdata/fetchdata';
 import { ChartPie, ChartThemeColor } from '@patternfly/react-charts';
 const Openshift: React.FunctionComponent<{}> = () => (
   <PageSection>
@@ -24,6 +26,9 @@ const Openshift: React.FunctionComponent<{}> = () => (
       width={400}
     />
   </div>
+
+  <Fetchdata/>
+
   </PageSection>
 )
 
